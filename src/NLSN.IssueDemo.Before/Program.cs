@@ -43,8 +43,15 @@ builder.Services.AddGraphQLServer()
 var app = builder.Build();
 
 app.UseRouting();
+
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapGraphQL();
+app.MapGet("/", context =>
+{
+	context.Response.Redirect("/graphql", false);
+	return Task.CompletedTask;
+});
 
 app.Run();
