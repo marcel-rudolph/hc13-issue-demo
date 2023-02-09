@@ -6,11 +6,13 @@
 
 1. Get auth token
 
+Run this query:
+
 ```graphql
 query { auth }
 ```
 
-Return something like this:
+which will return something like that:
 
 ```json
 {
@@ -20,17 +22,22 @@ Return something like this:
 }
 ```
 
-2. Use the output from step 1 in Authorization header
+2. Query some data with the auth token from the previous step
 
 ```graphql
 query {
-  colors { name hex }
+  colors {
+    name
+    hex
+  }
 }
 ```
 
 with `Authorization: Bearer <JWT>` as header.
 
-For before version 13 (here `13.0.0-rc.7`) you will get some data. But starting with version 13 you will get this:
+In the **Before**-Project, wich runs on version `13.0.0-rc.7`, you will get some data.
+
+In the **After**-Project, which runs with version `13.0.0` you will get this:
 
 ```json
 {
