@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using NLSN.IssueDemo.Before;
+using NLSN.IssueDemo.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 

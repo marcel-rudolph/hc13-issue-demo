@@ -1,4 +1,5 @@
 using HotChocolate.Authorization;
+using NLSN.IssueDemo.Shared;
 
 namespace NLSN.IssueDemo.Before;
 

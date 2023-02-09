@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using NLSN.IssueDemo.After;
+using NLSN.IssueDemo.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +34,8 @@ builder.Services.AddAuthorization(options =>
 });
 
 builder.Services.AddSingleton<IAuthorizationHandler, ClientPermissionsHandler>();
+
+builder.Services.AddSingleton<ColorRepository>();
 
 builder.Services.AddGraphQLServer()
 	.AddAuthorization()

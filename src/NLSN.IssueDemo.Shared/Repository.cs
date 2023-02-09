@@ -1,4 +1,4 @@
-namespace NLSN.IssueDemo.After;
+namespace NLSN.IssueDemo.Shared;
 
 public sealed class ColorRepository
 {

@@ -19,4 +19,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NLSN.IssueDemo.Shared\NLSN.IssueDemo.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
